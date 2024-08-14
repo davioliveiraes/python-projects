@@ -37,6 +37,6 @@ Desenvolvendo uma aplicação web usando python e sua framework Flask, com final
 
 ## 👨‍💻 Para executar o projeto
 
-1. Clone o repositório: `git clone https://github.com/davioliveiraes/nlw-python-expert.git`
+1. Clone o repositório: `git clone https://github.com/davioliveiraes/python-projects/tree/main/cadastro-listagem-produtos-Flask`
 2. Abra o terminal e caminhe até a pasta do projeto: `cd cadastro-listagem-produtos-Flask`
 2. Em seguida execute no terminal mesmo: `python app.py`
