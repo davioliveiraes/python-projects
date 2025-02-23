@@ -1,0 +1,10 @@
+x = input("Digite alguma coisa: ")
+
+print(f"Seu tipo é: {type(x)}")
+print(f"Existe espaços: {x.isspace()}")
+print(f"É númerico: {x.isnumeric()}")
+print(f"É alfabético: {x.isalpha()}")
+print(f"É alfanúmerico: {x.isalnum()}")
+print(f"É miúscula: {x.isupper()}")
+print(f"É minúscula: {x.islower()}")
+print(f"É capitalizada: {x.istitle()}")
