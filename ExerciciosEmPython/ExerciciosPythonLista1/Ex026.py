@@ -8,4 +8,3 @@ elif numero_2 > numero_1:
 else:
    print("Não existe valor maior, os dois são iguais!")
 
-
