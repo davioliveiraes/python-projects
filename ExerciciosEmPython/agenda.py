@@ -48,7 +48,7 @@ def mark_unmark_contact(contacts, i_list_contact, action):
 
 def list_contact_favorite(contacts):
    print("\nLista de contatos favoritos: ")
-   for i, contact in enumerate(contacts):
+   for i, contact in enumerate(contacts, start=1):
       if contact["Favorito"]:
          print(f"{i}. {contact["Nome"]} - {contact["Telefone"]} - {contact["Email"]}")
    return
