@@ -1,0 +1,11 @@
+sistema de Gerenciamento de Movimentações Financeiras. Confira os principais pontos:
+
+📌 Desafio
+
+🔹 Objetivo: Criar um projeto Fullstack para gerenciar transações financeiras.
+
+🔹 Funcionalidades:
+
+🔸 Autenticação: Tela de login para usuários.
+🔸 Movimentações: Cadastro, edição, exclusão e exibição de transações (data, tipo, valor, categoria e descrição).
+🔸 Categorias: Criação, listagem e exclusão de categorias, garantindo o uso correto nas transações.
