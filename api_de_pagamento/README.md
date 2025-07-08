@@ -6,10 +6,7 @@ Uma API completa para processamento de pagamentos via PIX, desenvolvida em Pytho
 
 Assista à demonstração completa da API em funcionamento:
 
-<video width="100%" controls>
-  <source src="video_api_payment.mp4" type="video/mp4">
-  Seu navegador não suporta vídeos HTML5. <a href="video_api_payment.mp4">Clique aqui para assistir</a>
-</video>
+[📹 Ver Demonstração Completa da API](https://youtu.be/WPPPpfbglj0)
 
 ## 📋 Funcionalidades
 
