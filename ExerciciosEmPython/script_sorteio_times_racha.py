@@ -1,6 +1,6 @@
 import random
 
-num_times = 4
+num_times = 8
 num_jogadores = 16
 
 jogadores_originais = []
