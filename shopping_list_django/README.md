@@ -4,7 +4,7 @@ Sistema de lista de compras digital para supermercados que oferece aos clientes 
 
 ## 📹 Demonstração
 
-[🎥 **Assista ao vídeo demonstrativo**](https://youtu.be/demo-video-id) - Veja o sistema funcionando na prática!
+[🎥 **Assista ao vídeo demonstrativo**](https://www.youtube.com/watch?v=bpvFdaUOU9Q) - Veja o sistema funcionando na prática!
 
 ## 💼 Funcionalidade no Mercado Real
 
@@ -77,10 +77,4 @@ python-projects/
 ## 👨‍💻 Desenvolvedor
 
 **Davi Oliveira**  
-*Desenvolvedor Full Stack Python*
-
-Especialista em desenvolvimento web com Python, Django e tecnologias modernas para criar soluções digitais inovadoras.
-
----
-
-*Desenvolvido para revolucionar a experiência de compras em supermercados* 🛒
+*Engenheiro de Software*
