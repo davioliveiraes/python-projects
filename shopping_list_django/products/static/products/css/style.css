@@ -1,0 +1,443 @@
+/* products/static/products/css/style.css */
+
+:root {
+    --primary-color: #1e3a5f;      /* Azul petróleo */
+    --primary-dark: #142b42;       /* Azul petróleo escuro */
+    --secondary-color: #2c5f7a;    /* Azul petróleo médio */
+    --accent-color: #34495e;       /* Azul acinzentado */
+    --black: #1a1a1a;             /* Preto suave */
+    --gray-dark: #2c2c2c;         /* Cinza escuro */
+    --gray-medium: #757575;       /* Cinza médio */
+    --gray-light: #e8e8e8;        /* Cinza claro */
+    --white: #ffffff;
+    --background: #f8f9fa;
+    --success: #28a745;
+    --danger: #dc3545;
+    --border-radius: 8px;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--background);
+    color: var(--black);
+    line-height: 1.6;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    border: 1px solid var(--gray-light);
+}
+
+/* Header */
+.header {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 32px 24px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.stat {
+    text-align: center;
+    padding: 8px;
+}
+
+.stat-number {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--white);
+    display: block;
+}
+
+.stat-label {
+    font-size: 11px;
+    opacity: 0.8;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 4px;
+}
+
+/* Form */
+.add-form {
+    padding: 24px;
+    background: var(--white);
+    border-bottom: 1px solid var(--gray-light);
+}
+
+.form-group {
+    display: grid;
+    grid-template-columns: 2fr 1fr 80px;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.form-group input {
+    padding: 12px 16px;
+    border: 1px solid var(--gray-light);
+    border-radius: var(--border-radius);
+    font-size: 14px;
+    transition: all 0.2s ease;
+    background: var(--white);
+    color: var(--black);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.1);
+}
+
+.form-group input::placeholder {
+    color: var(--gray-medium);
+}
+
+.btn {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 12px 20px;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+/* Product List */
+.product-list {
+    padding: 16px 24px 24px;
+    background: var(--white);
+}
+
+.product-item {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    margin-bottom: 8px;
+    background: var(--white);
+    border: 1px solid var(--gray-light);
+    border-radius: var(--border-radius);
+    transition: all 0.2s ease;
+}
+
+.product-item:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 2px 12px rgba(30, 58, 95, 0.1);
+}
+
+.product-item.purchased {
+    background: #f8f9fa;
+    opacity: 0.6;
+    border-color: var(--gray-light);
+}
+
+.product-item.purchased .product-name {
+    text-decoration: line-through;
+    color: var(--gray-medium);
+}
+
+.checkbox {
+    width: 18px;
+    height: 18px;
+    margin-right: 16px;
+    cursor: pointer;
+    accent-color: var(--primary-color);
+}
+
+.product-info {
+    flex: 1;
+    margin-right: 16px;
+}
+
+.product-name {
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--black);
+    margin-bottom: 4px;
+}
+
+.product-details {
+    color: var(--gray-medium);
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.product-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.quantity-btn {
+    width: 28px;
+    height: 28px;
+    border: 1px solid var(--gray-light);
+    border-radius: 50%;
+    background: var(--white);
+    color: var(--black);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.quantity-btn:hover {
+    background: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+}
+
+.quantity-input {
+    width: 45px;
+    height: 28px;
+    text-align: center;
+    border: 1px solid var(--gray-light);
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+    background: var(--white);
+}
+
+.quantity-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.delete-btn {
+    width: 32px;
+    height: 32px;
+    background: var(--white);
+    color: var(--danger);
+    border: 1px solid var(--danger);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.delete-btn:hover {
+    background: var(--danger);
+    color: var(--white);
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 48px 20px;
+    color: var(--gray-medium);
+}
+
+.empty-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+    opacity: 0.4;
+}
+
+.empty-state h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--black);
+}
+
+.empty-state p {
+    font-size: 14px;
+    color: var(--gray-medium);
+}
+
+.loading {
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    body {
+        padding: 12px;
+    }
+    
+    .container {
+        border-radius: 6px;
+    }
+    
+    .header {
+        padding: 24px 16px;
+    }
+    
+    .header h1 {
+        font-size: 20px;
+    }
+    
+    .add-form {
+        padding: 16px;
+    }
+    
+    .form-group {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    
+    .product-list {
+        padding: 16px;
+    }
+    
+    .product-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 12px;
+    }
+    
+    .product-info {
+        margin-right: 0;
+        width: 100%;
+    }
+    
+    .product-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .stats {
+        gap: 12px;
+    }
+    
+    .stat-number {
+        font-size: 18px;
+    }
+    
+    .stat-label {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 18px;
+    }
+    
+    .form-group input {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+    
+    .btn {
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+    
+    .product-name {
+        font-size: 14px;
+    }
+    
+    .product-details {
+        font-size: 12px;
+    }
+    
+    .quantity-btn {
+        width: 26px;
+        height: 26px;
+        font-size: 12px;
+    }
+    
+    .quantity-input {
+        width: 40px;
+        height: 26px;
+        font-size: 12px;
+    }
+    
+    .delete-btn {
+        width: 28px;
+        height: 28px;
+        font-size: 14px;
+    }
+}
+
+/* Animações sutis */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.product-item {
+    animation: fadeIn 0.3s ease;
+}
+
+/* Estados de foco melhorados */
+input:focus,
+button:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Melhor contraste para acessibilidade */
+.product-item.purchased .product-name {
+    color: var(--gray-medium);
+}
+
+/* Hover states mais sutis */
+.product-item:hover {
+    transform: translateY(-1px);
+}
+
+.quantity-btn:hover,
+.delete-btn:hover {
+    transform: scale(1.05);
+}

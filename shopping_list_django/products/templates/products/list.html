@@ -1,0 +1,65 @@
+{% extends 'products/base.html' %}
+{% load static %}
+
+{% block title %}Lista de Compras{% endblock %}
+
+{% block content %}
+<div class="container">
+   <div class="header">
+      <h1>🛒 LISTA DE COMPRAS</h1>
+      <div class="stats">
+         <div class="stat">
+            <div class="stat-number" id="total-items">{{ total_items }}</div>
+            <div class="stat-label">ITEMS</div>
+         </div>
+         <div class="stat">
+            <div class="stat-number" id="purchased-items">{{ purchased_items }}</div>
+            <div class="stat-label">COMPRADOS</div>
+         </div>
+         <div class="stat">
+            <div class="stat-number">R$ <span id="total_value">{{ total_value|floatformat:2 }}</span></div>
+            <div class="stat-label">TOTAL</div>
+         </div>
+      </div>
+   </div>
+
+   <div class="add-form">
+      <div class="form-group">
+         <input type="text" id="product-name" placeholder="Nome do produto" required />
+         <input type="number" id="product-price" placeholder="Preço" step="0.01" min="0" required />
+         <input type="number" id="product-quantity" placeholder="Qtd" min="1" value="1" required />
+      </div>
+      <button class="btn" onclick="addProduct()">Adicionar Produto</button>
+   </div>
+
+   <div class="product-list" id="product-list">
+      {% if products %}
+         {% for product in products %}
+         <div class="product-item {% if product.purchased %}purchased{% endif %}" data-id="{{ product.id }}">
+            <input type="checkbox" class="checkbox" {% if product.purchased %}checked{% endif %} onchange="togglePurchased({{ product.id }})">
+            <div class="product-info">
+               <div class="product-name">{{ product.name }}</div>
+               <div class="product-details">
+                  R$ {{ product.price|floatformat:2 }} x {{ product.quantity }} = R$ {{ product.total_price|floatformat:2 }}
+               </div>
+            </div>
+            <div class="product-actions">
+               <div class="quantity-control">
+                  <button class="quantity-btn" onclick="changeQuantity({{ product.id }}, -1)">-</button>
+                  <input type="number" class="quantity-input" value="{{ product.quantity }}" min="1" onchange="updateQuantity({{ product.id }}, this.value)">
+                  <button class="quantity-btn" onclick="changeQuantity({{ product.id }}, 1)">+</button>
+               </div>
+               <button class="delete-btn" onclick="deleteProduct({{ product.id }})">x</button>
+            </div>
+         </div>
+         {% endfor %}
+      {% else %}
+         <div class="empty-state">
+            <div class="empty-icon">🛒</div>
+            <h3>Lista Vazia</h3>
+            <p>Adicione podutos à sua lista de compras</p>
+         </div>
+      {% endif %}
+   </div>
+</div>
+{% endblock %}
