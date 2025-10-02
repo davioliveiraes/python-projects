@@ -1,0 +1,12 @@
+Você deve criar um programa que encontre todos os números escondidos dentro de uma string.
+
+        Regras:
+
+        O programa deve receber uma string digitada pelo usuário.
+
+        O programa deve extrair todos os números (mesmo que sejam de vários dígitos).
+
+        Deve exibir:
+         * A lista com todos os números encontrados.
+         * O maior número.
+         * A soma de todos os números.
