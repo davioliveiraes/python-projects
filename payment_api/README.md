@@ -232,11 +232,6 @@ A interface é totalmente responsiva, funcionando perfeitamente em:
 - 📟 Tablet (768px+)
 - 💻 Desktop (1024px+)
 
-
-## 📄 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
-
 ## 👨‍💻 Autor
 
 Desenvolvido durante o módulo 5 do curso Python da Rocketseat.
