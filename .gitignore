@@ -1,2 +1,7 @@
 venv
-venv
+custom_calculators_exemples_api/
+django_shopping_list/
+payment_api/
+py_SOLID_challenge/
+task_manager_api/
+user_auth_api/
