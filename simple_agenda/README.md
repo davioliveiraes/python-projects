@@ -19,7 +19,7 @@ Este projeto foi desenvolvido como exercício prático para consolidar os fundam
 ```bash
 git clone https://github.com/davioliveiraes/python-projects.git
 cd python-projects/simple_agenda
-python main.py
+python agenda.py
 ```
 
 ## Autor
