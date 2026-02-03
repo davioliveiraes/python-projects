@@ -36,7 +36,7 @@ pipx inject poetry poetry-plugin-shell
 
 # Clonar e acessar o projeto
 git clone https://github.com/davioliveiraes/python-projects.git
-cd products_api_fastAPI
+cd python-projects/products_api_workshop_fastAPI
 
 # Configurar Python e dependências
 poetry python install 3.13
