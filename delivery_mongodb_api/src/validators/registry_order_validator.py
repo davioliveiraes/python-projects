@@ -1,6 +1,6 @@
 from typing import Any
 from cerberus import Validator
-
+from src.main.errors.types.http_unprocessable_entity import HttpUnprocessableEntityError
 
 def registry_order_validator(body: dict[str, Any]) -> None:
     body_validator = Validator(
@@ -29,4 +29,4 @@ def registry_order_validator(body: dict[str, Any]) -> None:
     response = body_validator.validate(body)
 
     if not response:
-        raise Exception(body_validator.errors)
+        raise HttpUnprocessableEntityError(body_validator.errors)
