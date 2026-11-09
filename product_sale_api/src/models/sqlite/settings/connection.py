@@ -13,6 +13,6 @@ class SqliteConnectionHandle:
         )
         self.__conn = conn
         return conn
-    
+
     def get_connection(self) -> SqliteConnection:
         return self.__conn

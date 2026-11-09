@@ -1,30 +1,32 @@
+from typing import Any
 from redis import Redis
+from .interfaces.redis_repository import RedisRepositoryInterface
 
-class RedisRepository:
+class RedisRepository(RedisRepositoryInterface):
     def __init__(self, redis_conn: Redis) -> None:
         self.__redis_conn = redis_conn
 
-    def insert(self, key: str, value: any) -> None:
+    def insert(self, key: str, value: Any) -> None:
         self.__redis_conn.set(key, value)
-    
-    def get_key(self, key: str) -> str:
+
+    def get_key(self, key: str) -> str | None:
         value = self.__redis_conn.get(key)
         if value:
             return value.decode("utf-8")
         return None
-    
-    def insert_hash(self, key: str, field: str, value: any) -> None:
+
+    def insert_hash(self, key: str, field: str, value: Any) -> None:
         self.__redis_conn.hset(key, field, value)
-    
-    def get_hash(self, key: str, field: str) -> Any:
+
+    def get_hash(self, key: str, field: str) -> str | None:
         value = self.__redis_conn.hget(key, field)
         if value:
             return value.decode("utf-8")
         return None
 
-    def insert_ex(self, key: str, value: any, ex: int) -> None:
+    def insert_ex(self, key: str, value: Any, ex: int) -> None:
         self.__redis_conn.set(key, value, ex=ex)
 
-    def insert_hash_ex(self, key: str, field: str, value: any, ex: int) -> None:
+    def insert_hash_ex(self, key: str, field: str, value: Any, ex: int) -> None:
         self.__redis_conn.hset(key, field, value)
         self.__redis_conn.expire(key, ex)
